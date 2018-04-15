@@ -40,3 +40,5 @@ tutorial progresses, and you can follow the progress in this file below._
 
     + zeppelin-solidity@1.8.0
     added 8 packages in 6.737s
+
+### Adding `TutorialToken.sol` contract
