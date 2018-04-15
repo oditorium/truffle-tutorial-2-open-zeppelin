@@ -30,3 +30,13 @@ tutorial progresses, and you can follow the progress in this file below._
       Migrate:        truffle migrate
       Test contracts: truffle test
       Run dev server: npm run dev
+
+### Installing `zeppelin-solidity`
+
+    root@eth1:~/TUTORIALS/2_open_zeppelin# npm install zeppelin-solidity
+    npm WARN tutorialtoken@1.0.0 No repository field.
+    npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules/fsevents):
+    npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+    + zeppelin-solidity@1.8.0
+    added 8 packages in 6.737s
