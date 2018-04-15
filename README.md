@@ -88,6 +88,8 @@ In a separate terminal window we run `ganache-cli`
     (1) 0x3692f70bebd281f0a4fa708c0e85146b2b7debaa
     (2) 0xf08f7ff01ecafab799d5b3e30a21c965222e7dd5
     (3) 0xbfd75a2432a5ba59a74ddce0fec4e9a38cc60b6b
+    ...
+    Listening on localhost:8545
 
 However, the `migrate` command can't find the running chain
 
@@ -97,3 +99,87 @@ However, the `migrate` command can't find the running chain
         - is accepting RPC connections (i.e., "--rpc" option is used in geth)
         - is accessible over the network
         - is properly configured in your Truffle configuration file (truffle.js)
+
+
+### Changing `truffle.js` for `ganache-cli`
+
+We need to change the port to `8545`
+
+
+### Running `truffle migrate`
+
+We are now running the following command
+
+    root@eth1:~/TUTORIALS/2_open_zeppelin# truffle migrate
+    Using network 'development'.
+
+    Running migration: 1_initial_migration.js
+      Deploying Migrations...
+      ... 0x6cd791e73a9b062d503d16f2a935e2a27965d37ebaa45d65461fa0f8d316fc1a
+      Migrations: 0x6ebe8dba17ffb2fcc618308e0b90dd72cddb68e6
+    Saving successful migration to network...
+      ... 0x54b733c19e550b40f321c606db7844c6a6c1f724f320d9f1514bdf681ea5ce3a
+    Saving artifacts...
+    Running migration: 2_deploy_contracts.js
+      Deploying TutorialToken...
+      ... 0x591821b4f1418dfb43f79f8dfb3c0d10fd7a5ee218439fdea7fd4a54858a0851
+      TutorialToken: 0xe435eb68c9cc9fdc87e0b7da40743668759b4e6b
+    Saving successful migration to network...
+      ... 0xdc23372551e2c21cba0de9ffc84a8a49701f9209ce9c104188a3deb5e01fc833
+    Saving artifacts...
+
+Ganache records the following activity
+
+    Listening on localhost:8545
+
+
+    gnet_version
+    eth_accounts
+    eth_accounts
+    net_version
+    net_version
+    eth_sendTransaction
+
+      Transaction: 0x6cd791e73a9b062d503d16f2a935e2a27965d37ebaa45d65461fa0f8d316fc1a
+      Contract created: 0x6ebe8dba17ffb2fcc618308e0b90dd72cddb68e6
+      Gas usage: 268535
+      Block Number: 1
+      Block Time: Sun Apr 15 2018 07:54:42 GMT+0000 (UTC)
+
+    eth_newBlockFilter
+    eth_getFilterChanges
+    eth_getTransactionReceipt
+    eth_getCode
+    eth_uninstallFilter
+    eth_sendTransaction
+
+      Transaction: 0x54b733c19e550b40f321c606db7844c6a6c1f724f320d9f1514bdf681ea5ce3a
+      Gas usage: 41981
+      Block Number: 2
+      Block Time: Sun Apr 15 2018 07:54:42 GMT+0000 (UTC)
+
+    eth_getTransactionReceipt
+    eth_accounts
+    net_version
+    net_version
+    eth_sendTransaction
+
+      Transaction: 0x591821b4f1418dfb43f79f8dfb3c0d10fd7a5ee218439fdea7fd4a54858a0851
+      Contract created: 0xe435eb68c9cc9fdc87e0b7da40743668759b4e6b
+      Gas usage: 1488496
+      Block Number: 3
+      Block Time: Sun Apr 15 2018 07:54:42 GMT+0000 (UTC)
+
+    eth_newBlockFilter
+    eth_getFilterChanges
+    eth_getTransactionReceipt
+    eth_getCode
+    eth_uninstallFilter
+    eth_sendTransaction
+
+      Transaction: 0xdc23372551e2c21cba0de9ffc84a8a49701f9209ce9c104188a3deb5e01fc833
+      Gas usage: 26981
+      Block Number: 4
+      Block Time: Sun Apr 15 2018 07:54:42 GMT+0000 (UTC)
+
+    eth_getTransactionReceipt
