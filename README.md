@@ -42,3 +42,34 @@ tutorial progresses, and you can follow the progress in this file below._
     added 8 packages in 6.737s
 
 ### Adding `TutorialToken.sol` contract
+
+### Running `truffle compile`
+
+    root@eth1:~/TUTORIALS/2_open_zeppelin# truffle compile
+    Compiling ./contracts/Migrations.sol...
+    Compiling ./contracts/TutorialToken.sol...
+    Compiling zeppelin-solidity/contracts/math/SafeMath.sol...
+    Compiling zeppelin-solidity/contracts/token/ERC20/BasicToken.sol...
+    Compiling zeppelin-solidity/contracts/token/ERC20/ERC20.sol...
+    Compiling zeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol...
+    Compiling zeppelin-solidity/contracts/token/ERC20/StandardToken.sol...
+
+    Compilation warnings encountered:
+
+    zeppelin-solidity/contracts/token/ERC20/BasicToken.sol:38:5: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, _to, _value);
+        ^-------------------------------^
+    ,zeppelin-solidity/contracts/token/ERC20/StandardToken.sol:33:5: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_from, _to, _value);
+        ^--------------------------^
+    ,zeppelin-solidity/contracts/token/ERC20/StandardToken.sol:49:5: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+    ,zeppelin-solidity/contracts/token/ERC20/StandardToken.sol:75:5: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+        ^-----------------------------------------------------------^
+    ,zeppelin-solidity/contracts/token/ERC20/StandardToken.sol:96:5: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+        ^-----------------------------------------------------------^
+
+    Writing artifacts to ./build/contracts
