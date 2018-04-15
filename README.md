@@ -214,3 +214,8 @@ on `*:3001`.
     [Browsersync] Serving files from: ./build/contracts
     [Browsersync] Watching files...
     [Browsersync] Couldn't open browser (if you are using BrowserSync in a headless environment, you might want to set the open option to false)
+
+
+### FIN
+
+you now can follow the instructions in the [tutorial][ozt] to move tokens around.
