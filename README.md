@@ -73,3 +73,27 @@ tutorial progresses, and you can follow the progress in this file below._
         ^-----------------------------------------------------------^
 
     Writing artifacts to ./build/contracts
+
+
+### Running `truffle migrate` unsuccessfully
+
+In a separate terminal window we run `ganache-cli`
+
+    root@eth1:~/TUTORIALS/2_open_zeppelin# ganache-cli
+    Ganache CLI v6.1.0 (ganache-core: 2.1.0)
+
+    Available Accounts
+    ==================
+    (0) 0x507d2a5503aef198a138e7b4c22815fd1b6bdd83
+    (1) 0x3692f70bebd281f0a4fa708c0e85146b2b7debaa
+    (2) 0xf08f7ff01ecafab799d5b3e30a21c965222e7dd5
+    (3) 0xbfd75a2432a5ba59a74ddce0fec4e9a38cc60b6b
+
+However, the `migrate` command can't find the running chain
+
+    root@eth1:~/TUTORIALS/2_open_zeppelin# truffle migrate
+    Could not connect to your Ethereum client. Please check that your Ethereum client:
+        - is running
+        - is accepting RPC connections (i.e., "--rpc" option is used in geth)
+        - is accessible over the network
+        - is properly configured in your Truffle configuration file (truffle.js)
