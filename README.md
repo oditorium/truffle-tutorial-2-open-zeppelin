@@ -183,3 +183,34 @@ Ganache records the following activity
       Block Time: Sun Apr 15 2018 07:54:42 GMT+0000 (UTC)
 
     eth_getTransactionReceipt
+
+
+### Running `lite-server`
+
+We now run the dApp, which is available on `*:3000`, and *BrowserSync` which is available
+on `*:3001`.
+
+    root@eth1:~/TUTORIALS/2_open_zeppelin# npm run dev
+
+    > tutorialtoken@1.0.0 dev /root/TUTORIALS/2_open_zeppelin
+    > lite-server
+
+    ** browser-sync config **
+    { injectChanges: false,
+      files: [ './**/*.{html,htm,css,js}' ],
+      watchOptions: { ignored: 'node_modules' },
+      server:
+       { baseDir: [ './src', './build/contracts' ],
+         middleware: [ [Function], [Function] ] } }
+    [Browsersync] Access URLs:
+     --------------------------------------
+           Local: http://localhost:3000
+        External: http://206.189.23.54:3000
+     --------------------------------------
+              UI: http://localhost:3001
+     UI External: http://206.189.23.54:3001
+     --------------------------------------
+    [Browsersync] Serving files from: ./src
+    [Browsersync] Serving files from: ./build/contracts
+    [Browsersync] Watching files...
+    [Browsersync] Couldn't open browser (if you are using BrowserSync in a headless environment, you might want to set the open option to false)
